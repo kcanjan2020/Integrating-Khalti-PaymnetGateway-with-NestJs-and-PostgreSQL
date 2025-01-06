@@ -26,6 +26,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
           password: confingService.get('DB_PASSWORD'),
           database: confingService.get('DB_DATABASE'),
           autoLoadEntities: true,
+          synchronize: true,
         };
       },
       inject: [ConfigService],
